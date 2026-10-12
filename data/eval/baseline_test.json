@@ -1,0 +1,725 @@
+{
+  "dataset_sha256": "7c50995d54184f00975622f1ef5d01f571dfc97e4f87b213833bf70a4146e03c",
+  "dataset_version": "1.0",
+  "index_metadata_sha256": "9c84cb83400117391ad07a27bd3cbf5d29500372c03418faf7f7541ffce4d9f6",
+  "index_sha256": "98247c2d4f179b164dd4ea35700aedfb1efb855f8882a527b795cf59df4af0be",
+  "model_id": "BAAI/bge-small-zh-v1.5",
+  "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "records": [
+    {
+      "category": "shopping",
+      "expected_tool": "search_products",
+      "hit": 1,
+      "query": "帮我找一款1080P摄像头。",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "P008-description",
+        "P008-faq"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "P008-description:000",
+          "doc_id": "P008-description",
+          "score": 0.6425,
+          "source_path": "data/knowledge/products/P008.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P008-faq:000",
+          "doc_id": "P008-faq",
+          "score": 0.6155,
+          "source_path": "data/knowledge/products/P008-faq.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P004-description:000",
+          "doc_id": "P004-description",
+          "score": 0.5205,
+          "source_path": "data/knowledge/products/P004.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "S15"
+    },
+    {
+      "category": "shopping",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "高清摄像头有内置麦克风吗？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "P008-description",
+        "P008-faq"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "P008-description:000",
+          "doc_id": "P008-description",
+          "score": 0.694,
+          "source_path": "data/knowledge/products/P008.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P008-faq:000",
+          "doc_id": "P008-faq",
+          "score": 0.6775,
+          "source_path": "data/knowledge/products/P008-faq.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P009-faq:000",
+          "doc_id": "P009-faq",
+          "score": 0.5524,
+          "source_path": "data/knowledge/products/P009-faq.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "S16"
+    },
+    {
+      "category": "shopping",
+      "expected_tool": "search_products",
+      "hit": 1,
+      "query": "有没有心形指向的桌面麦克风？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "P009-description",
+        "P009-faq"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "P009-faq:000",
+          "doc_id": "P009-faq",
+          "score": 0.6352,
+          "source_path": "data/knowledge/products/P009-faq.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P009-description:000",
+          "doc_id": "P009-description",
+          "score": 0.6293,
+          "source_path": "data/knowledge/products/P009.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P008-description:000",
+          "doc_id": "P008-description",
+          "score": 0.3836,
+          "source_path": "data/knowledge/products/P008.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "S17"
+    },
+    {
+      "category": "shopping",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "桌面麦克风怎么连接电脑？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "P009-description",
+        "P009-faq"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "P009-description:000",
+          "doc_id": "P009-description",
+          "score": 0.7006,
+          "source_path": "data/knowledge/products/P009.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P009-faq:000",
+          "doc_id": "P009-faq",
+          "score": 0.6798,
+          "source_path": "data/knowledge/products/P009-faq.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P008-description:000",
+          "doc_id": "P008-description",
+          "score": 0.4619,
+          "source_path": "data/knowledge/products/P008.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "S18"
+    },
+    {
+      "category": "shopping",
+      "expected_tool": "search_products",
+      "hit": 1,
+      "query": "想买一个可以定时关闭的台灯。",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "P010-description",
+        "P010-faq"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "P010-description:000",
+          "doc_id": "P010-description",
+          "score": 0.6707,
+          "source_path": "data/knowledge/products/P010.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P010-faq:000",
+          "doc_id": "P010-faq",
+          "score": 0.6671,
+          "source_path": "data/knowledge/products/P010-faq.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P004-description:000",
+          "doc_id": "P004-description",
+          "score": 0.3809,
+          "source_path": "data/knowledge/products/P004.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "S19"
+    },
+    {
+      "category": "shopping",
+      "expected_tool": "get_price_stock",
+      "hit": 1,
+      "query": "智能台灯目前多少钱、还有库存吗？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "P010-description",
+        "P010-faq"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "P010-faq:000",
+          "doc_id": "P010-faq",
+          "score": 0.7928,
+          "source_path": "data/knowledge/products/P010-faq.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P010-description:000",
+          "doc_id": "P010-description",
+          "score": 0.7084,
+          "source_path": "data/knowledge/products/P010.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "P008-faq:000",
+          "doc_id": "P008-faq",
+          "score": 0.5433,
+          "source_path": "data/knowledge/products/P008-faq.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "S20"
+    },
+    {
+      "category": "order",
+      "expected_tool": "get_order_status",
+      "hit": 1,
+      "query": "已发货订单如何核实配送进度？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "policy-shipping:000",
+          "doc_id": "policy-shipping",
+          "score": 0.6892,
+          "source_path": "data/knowledge/policies/shipping.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ001:000",
+          "doc_id": "FAQ001",
+          "score": 0.6386,
+          "source_path": "data/knowledge/faqs/FAQ001.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ002:000",
+          "doc_id": "FAQ002",
+          "score": 0.5957,
+          "source_path": "data/knowledge/faqs/FAQ002.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "O14"
+    },
+    {
+      "category": "order",
+      "expected_tool": "get_order_status",
+      "hit": 1,
+      "query": "订单页面能不能看到当前处理状态？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ002:000",
+          "doc_id": "FAQ002",
+          "score": 0.6421,
+          "source_path": "data/knowledge/faqs/FAQ002.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-privacy:000",
+          "doc_id": "policy-privacy",
+          "score": 0.505,
+          "source_path": "data/knowledge/policies/privacy.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ003:000",
+          "doc_id": "FAQ003",
+          "score": 0.4685,
+          "source_path": "data/knowledge/faqs/FAQ003.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "O15"
+    },
+    {
+      "category": "order",
+      "expected_tool": "get_order_status",
+      "hit": 1,
+      "query": "请核对我这笔ORD001订单。",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ002:000",
+          "doc_id": "FAQ002",
+          "score": 0.5465,
+          "source_path": "data/knowledge/faqs/FAQ002.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ003:000",
+          "doc_id": "FAQ003",
+          "score": 0.4593,
+          "source_path": "data/knowledge/faqs/FAQ003.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ005:000",
+          "doc_id": "FAQ005",
+          "score": 0.4427,
+          "source_path": "data/knowledge/faqs/FAQ005.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "O16"
+    },
+    {
+      "category": "order",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "平台会把订单信息用于什么用途？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "policy-privacy"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "policy-privacy:000",
+          "doc_id": "policy-privacy",
+          "score": 0.5969,
+          "source_path": "data/knowledge/policies/privacy.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ002:000",
+          "doc_id": "FAQ002",
+          "score": 0.5769,
+          "source_path": "data/knowledge/faqs/FAQ002.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-shipping:000",
+          "doc_id": "policy-shipping",
+          "score": 0.4581,
+          "source_path": "data/knowledge/policies/shipping.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "O17"
+    },
+    {
+      "category": "order",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "订单完成以后怎样申请电子发票？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "FAQ004",
+        "policy-invoice"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ004:000",
+          "doc_id": "FAQ004",
+          "score": 0.7819,
+          "source_path": "data/knowledge/faqs/FAQ004.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-invoice:000",
+          "doc_id": "policy-invoice",
+          "score": 0.6859,
+          "source_path": "data/knowledge/policies/invoice.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ002:000",
+          "doc_id": "FAQ002",
+          "score": 0.5797,
+          "source_path": "data/knowledge/faqs/FAQ002.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "O18"
+    },
+    {
+      "category": "order",
+      "expected_tool": "get_order_status",
+      "hit": 1,
+      "query": "ORD001现在满足申请发票的条件吗？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "FAQ004",
+        "policy-invoice"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ004:000",
+          "doc_id": "FAQ004",
+          "score": 0.6376,
+          "source_path": "data/knowledge/faqs/FAQ004.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-invoice:000",
+          "doc_id": "policy-invoice",
+          "score": 0.6223,
+          "source_path": "data/knowledge/policies/invoice.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-shipping:000",
+          "doc_id": "policy-shipping",
+          "score": 0.4662,
+          "source_path": "data/knowledge/policies/shipping.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "O19"
+    },
+    {
+      "category": "order",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "刚支付的订单适用什么发货规则？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "policy-shipping"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "policy-shipping:000",
+          "doc_id": "policy-shipping",
+          "score": 0.6118,
+          "source_path": "data/knowledge/policies/shipping.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ001:000",
+          "doc_id": "FAQ001",
+          "score": 0.5906,
+          "source_path": "data/knowledge/faqs/FAQ001.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-invoice:000",
+          "doc_id": "policy-invoice",
+          "score": 0.53,
+          "source_path": "data/knowledge/policies/invoice.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "O20"
+    },
+    {
+      "category": "aftersales",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "如何联系客服申请商品保修？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "FAQ005"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ005:000",
+          "doc_id": "FAQ005",
+          "score": 0.7823,
+          "source_path": "data/knowledge/faqs/FAQ005.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-warranty:000",
+          "doc_id": "policy-warranty",
+          "score": 0.6436,
+          "source_path": "data/knowledge/policies/warranty.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ003:000",
+          "doc_id": "FAQ003",
+          "score": 0.5908,
+          "source_path": "data/knowledge/faqs/FAQ003.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "A14"
+    },
+    {
+      "category": "aftersales",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "售后保修的具体范围以什么为准？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "policy-warranty"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "policy-warranty:000",
+          "doc_id": "policy-warranty",
+          "score": 0.7388,
+          "source_path": "data/knowledge/policies/warranty.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ005:000",
+          "doc_id": "FAQ005",
+          "score": 0.593,
+          "source_path": "data/knowledge/faqs/FAQ005.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-shipping:000",
+          "doc_id": "policy-shipping",
+          "score": 0.512,
+          "source_path": "data/knowledge/policies/shipping.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "A15"
+    },
+    {
+      "category": "aftersales",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "售后发票可以申请电子版吗？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "FAQ004",
+        "policy-invoice"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ004:000",
+          "doc_id": "FAQ004",
+          "score": 0.7532,
+          "source_path": "data/knowledge/faqs/FAQ004.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-invoice:000",
+          "doc_id": "policy-invoice",
+          "score": 0.6342,
+          "source_path": "data/knowledge/policies/invoice.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ003:000",
+          "doc_id": "FAQ003",
+          "score": 0.5246,
+          "source_path": "data/knowledge/faqs/FAQ003.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "A16"
+    },
+    {
+      "category": "aftersales",
+      "expected_tool": "get_return_eligibility",
+      "hit": 1,
+      "query": "怎样判断我的订单是否可退？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ003:000",
+          "doc_id": "FAQ003",
+          "score": 0.6577,
+          "source_path": "data/knowledge/faqs/FAQ003.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ002:000",
+          "doc_id": "FAQ002",
+          "score": 0.6356,
+          "source_path": "data/knowledge/faqs/FAQ002.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-returns:000",
+          "doc_id": "policy-returns",
+          "score": 0.5739,
+          "source_path": "data/knowledge/policies/returns.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "A17"
+    },
+    {
+      "category": "aftersales",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "定制产品可能有哪些退货例外？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "policy-returns:000",
+          "doc_id": "policy-returns",
+          "score": 0.5531,
+          "source_path": "data/knowledge/policies/returns.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ003:000",
+          "doc_id": "FAQ003",
+          "score": 0.5039,
+          "source_path": "data/knowledge/faqs/FAQ003.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-privacy:000",
+          "doc_id": "policy-privacy",
+          "score": 0.4316,
+          "source_path": "data/knowledge/policies/privacy.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "A18"
+    },
+    {
+      "category": "aftersales",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "电子发票的申请有什么限制？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "policy-invoice"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "FAQ004:000",
+          "doc_id": "FAQ004",
+          "score": 0.6505,
+          "source_path": "data/knowledge/faqs/FAQ004.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-invoice:000",
+          "doc_id": "policy-invoice",
+          "score": 0.6463,
+          "source_path": "data/knowledge/policies/invoice.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "policy-returns:000",
+          "doc_id": "policy-returns",
+          "score": 0.4016,
+          "source_path": "data/knowledge/policies/returns.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "A19"
+    },
+    {
+      "category": "aftersales",
+      "expected_tool": "none",
+      "hit": 1,
+      "query": "售后使用订单信息时如何保护隐私？",
+      "recall": 1.0,
+      "relevant_doc_ids": [
+        "policy-privacy"
+      ],
+      "retrieved": [
+        {
+          "chunk_id": "policy-privacy:000",
+          "doc_id": "policy-privacy",
+          "score": 0.6804,
+          "source_path": "data/knowledge/policies/privacy.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ002:000",
+          "doc_id": "FAQ002",
+          "score": 0.5496,
+          "source_path": "data/knowledge/faqs/FAQ002.md",
+          "version": "1.0"
+        },
+        {
+          "chunk_id": "FAQ005:000",
+          "doc_id": "FAQ005",
+          "score": 0.4971,
+          "source_path": "data/knowledge/faqs/FAQ005.md",
+          "version": "1.0"
+        }
+      ],
+      "task_id": "A20"
+    }
+  ],
+  "split": "test",
+  "summary": {
+    "by_category": {
+      "aftersales": {
+        "count": 7,
+        "hit_at_3": 1.0,
+        "recall_at_3": 1.0
+      },
+      "order": {
+        "count": 7,
+        "hit_at_3": 1.0,
+        "recall_at_3": 1.0
+      },
+      "shopping": {
+        "count": 6,
+        "hit_at_3": 1.0,
+        "recall_at_3": 1.0
+      }
+    },
+    "count": 20,
+    "hit_at_3": 1.0,
+    "recall_at_3": 1.0
+  },
+  "top_k": 3
+}

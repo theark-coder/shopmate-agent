@@ -1,0 +1,767 @@
+{
+  "dataset_version": "1.0",
+  "tasks": [
+    {
+      "id": "S01",
+      "split": "dev",
+      "category": "shopping",
+      "query": "想买主动降噪耳机，推荐哪款？",
+      "relevant_doc_ids": [
+        "P001-description",
+        "P001-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S02",
+      "split": "dev",
+      "category": "shopping",
+      "query": "蓝牙降噪耳机续航多少小时？",
+      "relevant_doc_ids": [
+        "P001-description",
+        "P001-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S03",
+      "split": "dev",
+      "category": "shopping",
+      "query": "有支持热插拔的机械键盘吗？",
+      "relevant_doc_ids": [
+        "P002-description",
+        "P002-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S04",
+      "split": "dev",
+      "category": "shopping",
+      "query": "机械键盘是什么布局？",
+      "relevant_doc_ids": [
+        "P002-description",
+        "P002-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S05",
+      "split": "dev",
+      "category": "shopping",
+      "query": "想选静音按键的无线鼠标。",
+      "relevant_doc_ids": [
+        "P003-description",
+        "P003-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S06",
+      "split": "dev",
+      "category": "shopping",
+      "query": "无线鼠标支持哪种连接？",
+      "relevant_doc_ids": [
+        "P003-description",
+        "P003-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S07",
+      "split": "dev",
+      "category": "shopping",
+      "query": "有15.6英寸的便携显示器吗？",
+      "relevant_doc_ids": [
+        "P004-description",
+        "P004-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S08",
+      "split": "dev",
+      "category": "shopping",
+      "query": "便携显示器分辨率是多少？",
+      "relevant_doc_ids": [
+        "P004-description",
+        "P004-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S09",
+      "split": "dev",
+      "category": "shopping",
+      "query": "有没有带HDMI的扩展坞？",
+      "relevant_doc_ids": [
+        "P005-description",
+        "P005-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S10",
+      "split": "dev",
+      "category": "shopping",
+      "query": "USB-C扩展坞有哪些接口？",
+      "relevant_doc_ids": [
+        "P005-description",
+        "P005-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S11",
+      "split": "dev",
+      "category": "shopping",
+      "query": "想买1TB的移动固态硬盘。",
+      "relevant_doc_ids": [
+        "P006-description",
+        "P006-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S12",
+      "split": "dev",
+      "category": "shopping",
+      "query": "移动固态硬盘使用什么接口？",
+      "relevant_doc_ids": [
+        "P006-description",
+        "P006-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S13",
+      "split": "dev",
+      "category": "shopping",
+      "query": "推荐一款可调节高度的笔记本支架。",
+      "relevant_doc_ids": [
+        "P007-description",
+        "P007-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S14",
+      "split": "dev",
+      "category": "shopping",
+      "query": "笔记本支架是什么材质？",
+      "relevant_doc_ids": [
+        "P007-description",
+        "P007-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S15",
+      "split": "test",
+      "category": "shopping",
+      "query": "帮我找一款1080P摄像头。",
+      "relevant_doc_ids": [
+        "P008-description",
+        "P008-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S16",
+      "split": "test",
+      "category": "shopping",
+      "query": "高清摄像头有内置麦克风吗？",
+      "relevant_doc_ids": [
+        "P008-description",
+        "P008-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S17",
+      "split": "test",
+      "category": "shopping",
+      "query": "有没有心形指向的桌面麦克风？",
+      "relevant_doc_ids": [
+        "P009-description",
+        "P009-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S18",
+      "split": "test",
+      "category": "shopping",
+      "query": "桌面麦克风怎么连接电脑？",
+      "relevant_doc_ids": [
+        "P009-description",
+        "P009-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "S19",
+      "split": "test",
+      "category": "shopping",
+      "query": "想买一个可以定时关闭的台灯。",
+      "relevant_doc_ids": [
+        "P010-description",
+        "P010-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "search_products"
+    },
+    {
+      "id": "S20",
+      "split": "test",
+      "category": "shopping",
+      "query": "智能台灯目前多少钱、还有库存吗？",
+      "relevant_doc_ids": [
+        "P010-description",
+        "P010-faq"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "get_price_stock"
+    },
+    {
+      "id": "O01",
+      "split": "dev",
+      "category": "order",
+      "query": "帮我看一下自己的订单状态。",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O02",
+      "split": "dev",
+      "category": "order",
+      "query": "订单ORD001已经发货了吗？",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O03",
+      "split": "dev",
+      "category": "order",
+      "query": "ORD001什么时候安排发货？",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O04",
+      "split": "dev",
+      "category": "order",
+      "query": "想查看ORD001的物流处理进度。",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O05",
+      "split": "dev",
+      "category": "order",
+      "query": "付款后通常多久发货？",
+      "relevant_doc_ids": [
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "O06",
+      "split": "dev",
+      "category": "order",
+      "query": "昨天付款还没发货，怎么核对？",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O07",
+      "split": "dev",
+      "category": "order",
+      "query": "如何确认ORD001现在的履约状态？",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O08",
+      "split": "dev",
+      "category": "order",
+      "query": "如何查询我有权限查看的订单？",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-privacy"
+      ],
+      "relevant_policy_ids": [
+        "policy-privacy"
+      ],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O09",
+      "split": "dev",
+      "category": "order",
+      "query": "我可以查看其他顾客的订单吗？",
+      "relevant_doc_ids": [
+        "policy-privacy"
+      ],
+      "relevant_policy_ids": [
+        "policy-privacy"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "O10",
+      "split": "dev",
+      "category": "order",
+      "query": "查询个人订单需要登录账户吗？",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-privacy"
+      ],
+      "relevant_policy_ids": [
+        "policy-privacy"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "O11",
+      "split": "dev",
+      "category": "order",
+      "query": "ORD001是否已经进入配送流程？",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O12",
+      "split": "dev",
+      "category": "order",
+      "query": "发货进度是不是以订单状态为准？",
+      "relevant_doc_ids": [
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "O13",
+      "split": "dev",
+      "category": "order",
+      "query": "ORD001买的是什么商品？",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O14",
+      "split": "test",
+      "category": "order",
+      "query": "已发货订单如何核实配送进度？",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O15",
+      "split": "test",
+      "category": "order",
+      "query": "订单页面能不能看到当前处理状态？",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O16",
+      "split": "test",
+      "category": "order",
+      "query": "请核对我这笔ORD001订单。",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O17",
+      "split": "test",
+      "category": "order",
+      "query": "平台会把订单信息用于什么用途？",
+      "relevant_doc_ids": [
+        "policy-privacy"
+      ],
+      "relevant_policy_ids": [
+        "policy-privacy"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "O18",
+      "split": "test",
+      "category": "order",
+      "query": "订单完成以后怎样申请电子发票？",
+      "relevant_doc_ids": [
+        "FAQ004",
+        "policy-invoice"
+      ],
+      "relevant_policy_ids": [
+        "policy-invoice"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "O19",
+      "split": "test",
+      "category": "order",
+      "query": "ORD001现在满足申请发票的条件吗？",
+      "relevant_doc_ids": [
+        "FAQ004",
+        "policy-invoice"
+      ],
+      "relevant_policy_ids": [
+        "policy-invoice"
+      ],
+      "expected_tool": "get_order_status"
+    },
+    {
+      "id": "O20",
+      "split": "test",
+      "category": "order",
+      "query": "刚支付的订单适用什么发货规则？",
+      "relevant_doc_ids": [
+        "policy-shipping"
+      ],
+      "relevant_policy_ids": [
+        "policy-shipping"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A01",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "签收七天内可以申请退货吗？",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A02",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "退货商品需要保持完好吗？",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A03",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "定制商品适用七天退货吗？",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A04",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "耳机申请退货有哪些商品状态要求？",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A05",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "我的ORD001订单符合退货条件吗？",
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "get_return_eligibility"
+    },
+    {
+      "id": "A06",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "退货资格需要结合订单状态判断吗？",
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "get_return_eligibility"
+    },
+    {
+      "id": "A07",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "超过七天还能申请退货吗？",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A08",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "在哪里查看商品退货规则？",
+      "relevant_doc_ids": [
+        "FAQ003",
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A09",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "售后审核退货要核对哪些条件？",
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "get_return_eligibility"
+    },
+    {
+      "id": "A10",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "七天退货的适用条件是什么？",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A11",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "商品保修范围由什么决定？",
+      "relevant_doc_ids": [
+        "policy-warranty"
+      ],
+      "relevant_policy_ids": [
+        "policy-warranty"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A12",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "这类商品的保修期限在哪里查询？",
+      "relevant_doc_ids": [
+        "policy-warranty"
+      ],
+      "relevant_policy_ids": [
+        "policy-warranty"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A13",
+      "split": "dev",
+      "category": "aftersales",
+      "query": "申请保修需要准备哪些信息？",
+      "relevant_doc_ids": [
+        "FAQ005",
+        "policy-warranty"
+      ],
+      "relevant_policy_ids": [
+        "policy-warranty"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A14",
+      "split": "test",
+      "category": "aftersales",
+      "query": "如何联系客服申请商品保修？",
+      "relevant_doc_ids": [
+        "FAQ005"
+      ],
+      "relevant_policy_ids": [],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A15",
+      "split": "test",
+      "category": "aftersales",
+      "query": "售后保修的具体范围以什么为准？",
+      "relevant_doc_ids": [
+        "policy-warranty"
+      ],
+      "relevant_policy_ids": [
+        "policy-warranty"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A16",
+      "split": "test",
+      "category": "aftersales",
+      "query": "售后发票可以申请电子版吗？",
+      "relevant_doc_ids": [
+        "FAQ004",
+        "policy-invoice"
+      ],
+      "relevant_policy_ids": [
+        "policy-invoice"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A17",
+      "split": "test",
+      "category": "aftersales",
+      "query": "怎样判断我的订单是否可退？",
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "get_return_eligibility"
+    },
+    {
+      "id": "A18",
+      "split": "test",
+      "category": "aftersales",
+      "query": "定制产品可能有哪些退货例外？",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "relevant_policy_ids": [
+        "policy-returns"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A19",
+      "split": "test",
+      "category": "aftersales",
+      "query": "电子发票的申请有什么限制？",
+      "relevant_doc_ids": [
+        "policy-invoice"
+      ],
+      "relevant_policy_ids": [
+        "policy-invoice"
+      ],
+      "expected_tool": "none"
+    },
+    {
+      "id": "A20",
+      "split": "test",
+      "category": "aftersales",
+      "query": "售后使用订单信息时如何保护隐私？",
+      "relevant_doc_ids": [
+        "policy-privacy"
+      ],
+      "relevant_policy_ids": [
+        "policy-privacy"
+      ],
+      "expected_tool": "none"
+    }
+  ]
+}
