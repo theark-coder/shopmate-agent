@@ -3,7 +3,7 @@ import json
 import time
 from dataclasses import dataclass, field
 from typing import Any
-
+from shopmate_agent.llm_metrics import create_with_metrics
 from shopmate_agent.tool_registry import ToolRegistry
 
 
@@ -64,7 +64,8 @@ def run_agent_loop(
 
         # Model：决策
         try:
-            response = client.chat.completions.create(
+           response, metrics = create_with_metrics(
+                client,
                 model="qwen-plus",
                 messages=messages,
                 tools=registry.get_schemas(),
