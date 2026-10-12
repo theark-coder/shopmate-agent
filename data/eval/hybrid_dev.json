@@ -1,0 +1,1409 @@
+{
+  "split": "dev",
+  "dataset_sha256": "7c50995d54184f00975622f1ef5d01f571dfc97e4f87b213833bf70a4146e03c",
+  "model_id": "BAAI/bge-small-zh-v1.5",
+  "model_revision": "7999e1d3359715c523056ef9478215996d62a620",
+  "index_sha256": "98247c2d4f179b164dd4ea35700aedfb1efb855f8882a527b795cf59df4af0be",
+  "bm25_build_ms": 594.38,
+  "rrf_k": 60,
+  "candidate_k": 15,
+  "dense_summary": {
+    "hit_at_3": 0.975,
+    "recall_at_3": 0.925,
+    "avg_latency_ms": 8.53
+  },
+  "hybrid_summary": {
+    "hit_at_3": 0.975,
+    "recall_at_3": 0.9375,
+    "avg_latency_ms": 8.84
+  },
+  "improved_task_ids": [
+    "O02"
+  ],
+  "regressed_task_ids": [],
+  "records": [
+    {
+      "task_id": "S01",
+      "query": "想买主动降噪耳机，推荐哪款？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P001-description",
+        "P001-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P001-description",
+          "P001-faq",
+          "P003-description"
+        ],
+        "latency_ms": 17.57
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P001-description",
+          "P001-faq",
+          "P003-description"
+        ],
+        "latency_ms": 19.72
+      },
+      "bm25_doc_ids": [
+        "P001-description",
+        "P001-faq"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S02",
+      "query": "蓝牙降噪耳机续航多少小时？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P001-description",
+        "P001-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P001-faq",
+          "P001-description",
+          "FAQ001"
+        ],
+        "latency_ms": 7.07
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P001-faq",
+          "P001-description",
+          "FAQ001"
+        ],
+        "latency_ms": 7.26
+      },
+      "bm25_doc_ids": [
+        "P001-description",
+        "P001-faq",
+        "FAQ001"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S03",
+      "query": "有支持热插拔的机械键盘吗？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P002-description",
+        "P002-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P002-faq",
+          "P002-description",
+          "P005-faq"
+        ],
+        "latency_ms": 8.37
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P002-faq",
+          "P002-description",
+          "P003-faq"
+        ],
+        "latency_ms": 8.66
+      },
+      "bm25_doc_ids": [
+        "P002-description",
+        "P002-faq",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S04",
+      "query": "机械键盘是什么布局？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P002-description",
+        "P002-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P002-description",
+          "P002-faq",
+          "P007-faq"
+        ],
+        "latency_ms": 8.22
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P002-description",
+          "P002-faq",
+          "P007-faq"
+        ],
+        "latency_ms": 8.45
+      },
+      "bm25_doc_ids": [
+        "P002-description",
+        "P002-faq",
+        "FAQ001"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S05",
+      "query": "想选静音按键的无线鼠标。",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P003-description",
+        "P003-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P003-description",
+          "P003-faq",
+          "P009-description"
+        ],
+        "latency_ms": 9.23
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P003-description",
+          "P003-faq",
+          "policy-invoice"
+        ],
+        "latency_ms": 9.49
+      },
+      "bm25_doc_ids": [
+        "P003-description",
+        "P003-faq",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S06",
+      "query": "无线鼠标支持哪种连接？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P003-description",
+        "P003-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P003-description",
+          "P003-faq",
+          "P005-description"
+        ],
+        "latency_ms": 8.22
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P003-description",
+          "P003-faq",
+          "P009-description"
+        ],
+        "latency_ms": 8.47
+      },
+      "bm25_doc_ids": [
+        "P003-description",
+        "P003-faq",
+        "P009-description"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S07",
+      "query": "有15.6英寸的便携显示器吗？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P004-description",
+        "P004-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P004-description",
+          "P004-faq",
+          "P005-faq"
+        ],
+        "latency_ms": 9.1
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P004-description",
+          "P004-faq",
+          "P003-faq"
+        ],
+        "latency_ms": 9.41
+      },
+      "bm25_doc_ids": [
+        "P004-description",
+        "P004-faq",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S08",
+      "query": "便携显示器分辨率是多少？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P004-description",
+        "P004-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P004-description",
+          "P004-faq",
+          "P005-faq"
+        ],
+        "latency_ms": 8.41
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P004-description",
+          "P004-faq",
+          "P003-faq"
+        ],
+        "latency_ms": 8.8
+      },
+      "bm25_doc_ids": [
+        "P004-description",
+        "P004-faq",
+        "P002-faq"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S09",
+      "query": "有没有带HDMI的扩展坞？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P005-description",
+        "P005-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P005-faq",
+          "P005-description",
+          "P004-faq"
+        ],
+        "latency_ms": 7.66
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P005-faq",
+          "P005-description",
+          "policy-invoice"
+        ],
+        "latency_ms": 7.94
+      },
+      "bm25_doc_ids": [
+        "P005-description",
+        "P005-faq",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S10",
+      "query": "USB-C扩展坞有哪些接口？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P005-description",
+        "P005-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P005-description",
+          "P005-faq",
+          "P009-description"
+        ],
+        "latency_ms": 8.72
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P005-description",
+          "P005-faq",
+          "P006-description"
+        ],
+        "latency_ms": 9.0
+      },
+      "bm25_doc_ids": [
+        "P005-description",
+        "P005-faq",
+        "P006-faq"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S11",
+      "query": "想买1TB的移动固态硬盘。",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P006-description",
+        "P006-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P006-description",
+          "P006-faq",
+          "P005-faq"
+        ],
+        "latency_ms": 8.33
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P006-description",
+          "P006-faq",
+          "policy-invoice"
+        ],
+        "latency_ms": 8.6
+      },
+      "bm25_doc_ids": [
+        "P006-description",
+        "P006-faq",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S12",
+      "query": "移动固态硬盘使用什么接口？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P006-description",
+        "P006-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P006-description",
+          "P006-faq",
+          "P005-description"
+        ],
+        "latency_ms": 8.64
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P006-description",
+          "P006-faq",
+          "P005-faq"
+        ],
+        "latency_ms": 8.83
+      },
+      "bm25_doc_ids": [
+        "P006-description",
+        "P006-faq",
+        "P005-faq"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S13",
+      "query": "推荐一款可调节高度的笔记本支架。",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P007-description",
+        "P007-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P007-description",
+          "P007-faq",
+          "P004-description"
+        ],
+        "latency_ms": 8.28
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P007-description",
+          "P007-faq",
+          "P010-description"
+        ],
+        "latency_ms": 8.6
+      },
+      "bm25_doc_ids": [
+        "P007-description",
+        "P007-faq",
+        "policy-returns"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "S14",
+      "query": "笔记本支架是什么材质？",
+      "category": "shopping",
+      "relevant_doc_ids": [
+        "P007-description",
+        "P007-faq"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P007-description",
+          "P007-faq",
+          "P002-description"
+        ],
+        "latency_ms": 8.59
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "P007-description",
+          "P007-faq",
+          "P002-faq"
+        ],
+        "latency_ms": 8.77
+      },
+      "bm25_doc_ids": [
+        "P007-description",
+        "P007-faq",
+        "FAQ001"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O01",
+      "query": "帮我看一下自己的订单状态。",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "FAQ003",
+          "policy-shipping"
+        ],
+        "latency_ms": 6.96
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "policy-privacy",
+          "policy-invoice"
+        ],
+        "latency_ms": 7.19
+      },
+      "bm25_doc_ids": [
+        "policy-invoice",
+        "policy-privacy",
+        "policy-returns"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O02",
+      "query": "订单ORD001已经发货了吗？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 0.5,
+        "doc_ids": [
+          "FAQ001",
+          "FAQ002",
+          "FAQ004"
+        ],
+        "latency_ms": 7.31
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ001",
+          "FAQ002",
+          "policy-shipping"
+        ],
+        "latency_ms": 7.58
+      },
+      "bm25_doc_ids": [
+        "FAQ001",
+        "policy-shipping",
+        "FAQ004"
+      ],
+      "delta_recall": 0.5
+    },
+    {
+      "task_id": "O03",
+      "query": "ORD001什么时候安排发货？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 0.5,
+        "doc_ids": [
+          "FAQ001",
+          "policy-shipping",
+          "policy-returns"
+        ],
+        "latency_ms": 8.07
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 0.5,
+        "doc_ids": [
+          "FAQ001",
+          "policy-shipping",
+          "P005-faq"
+        ],
+        "latency_ms": 8.31
+      },
+      "bm25_doc_ids": [
+        "FAQ001",
+        "policy-shipping",
+        "P002-faq"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O04",
+      "query": "想查看ORD001的物流处理进度。",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "P005-description",
+          "FAQ003"
+        ],
+        "latency_ms": 8.57
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "FAQ002"
+        ],
+        "latency_ms": 8.79
+      },
+      "bm25_doc_ids": [
+        "policy-privacy",
+        "FAQ003",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O05",
+      "query": "付款后通常多久发货？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "policy-shipping"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ001",
+          "policy-shipping",
+          "policy-returns"
+        ],
+        "latency_ms": 7.28
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ001",
+          "policy-shipping",
+          "policy-returns"
+        ],
+        "latency_ms": 7.45
+      },
+      "bm25_doc_ids": [
+        "FAQ001",
+        "policy-shipping",
+        "FAQ002"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O06",
+      "query": "昨天付款还没发货，怎么核对？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 0.5,
+        "doc_ids": [
+          "FAQ001",
+          "policy-shipping",
+          "policy-returns"
+        ],
+        "latency_ms": 8.17
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 0.5,
+        "doc_ids": [
+          "FAQ001",
+          "policy-shipping",
+          "policy-returns"
+        ],
+        "latency_ms": 8.39
+      },
+      "bm25_doc_ids": [
+        "FAQ001",
+        "policy-shipping"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O07",
+      "query": "如何确认ORD001现在的履约状态？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "policy-shipping",
+          "FAQ003"
+        ],
+        "latency_ms": 7.6
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "FAQ003",
+          "policy-shipping"
+        ],
+        "latency_ms": 7.83
+      },
+      "bm25_doc_ids": [
+        "FAQ002",
+        "FAQ003",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O08",
+      "query": "如何查询我有权限查看的订单？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-privacy"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "policy-privacy",
+          "FAQ003"
+        ],
+        "latency_ms": 8.03
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "FAQ003",
+          "policy-privacy"
+        ],
+        "latency_ms": 8.27
+      },
+      "bm25_doc_ids": [
+        "FAQ003",
+        "FAQ002",
+        "policy-privacy"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O09",
+      "query": "我可以查看其他顾客的订单吗？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "policy-privacy"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "policy-privacy",
+          "FAQ004"
+        ],
+        "latency_ms": 7.69
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ004",
+          "policy-privacy",
+          "FAQ003"
+        ],
+        "latency_ms": 7.91
+      },
+      "bm25_doc_ids": [
+        "FAQ004",
+        "FAQ003",
+        "policy-privacy"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O10",
+      "query": "查询个人订单需要登录账户吗？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-privacy"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "policy-privacy",
+          "FAQ004"
+        ],
+        "latency_ms": 8.3
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ002",
+          "policy-privacy",
+          "FAQ004"
+        ],
+        "latency_ms": 8.59
+      },
+      "bm25_doc_ids": [
+        "FAQ002",
+        "policy-privacy",
+        "FAQ004"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O11",
+      "query": "ORD001是否已经进入配送流程？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002",
+        "policy-shipping"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 0.5,
+        "doc_ids": [
+          "policy-shipping",
+          "FAQ001",
+          "FAQ003"
+        ],
+        "latency_ms": 8.63
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 0.5,
+        "doc_ids": [
+          "policy-shipping",
+          "FAQ001",
+          "policy-returns"
+        ],
+        "latency_ms": 8.93
+      },
+      "bm25_doc_ids": [
+        "policy-shipping",
+        "FAQ001",
+        "policy-invoice"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O12",
+      "query": "发货进度是不是以订单状态为准？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "policy-shipping"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-shipping",
+          "FAQ001",
+          "FAQ002"
+        ],
+        "latency_ms": 9.09
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-shipping",
+          "FAQ001",
+          "FAQ002"
+        ],
+        "latency_ms": 9.44
+      },
+      "bm25_doc_ids": [
+        "policy-shipping",
+        "policy-warranty",
+        "FAQ001"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "O13",
+      "query": "ORD001买的是什么商品？",
+      "category": "order",
+      "relevant_doc_ids": [
+        "FAQ002"
+      ],
+      "dense": {
+        "hit": 0,
+        "recall": 0.0,
+        "doc_ids": [
+          "P005-description",
+          "P010-description",
+          "P004-description"
+        ],
+        "latency_ms": 8.89
+      },
+      "hybrid": {
+        "hit": 0,
+        "recall": 0.0,
+        "doc_ids": [
+          "P005-faq",
+          "P010-faq",
+          "P004-faq"
+        ],
+        "latency_ms": 9.11
+      },
+      "bm25_doc_ids": [
+        "policy-invoice",
+        "policy-returns",
+        "policy-privacy"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A01",
+      "query": "签收七天内可以申请退货吗？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "policy-shipping"
+        ],
+        "latency_ms": 7.81
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "FAQ004"
+        ],
+        "latency_ms": 8.04
+      },
+      "bm25_doc_ids": [
+        "policy-returns",
+        "FAQ004",
+        "FAQ003"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A02",
+      "query": "退货商品需要保持完好吗？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "policy-warranty"
+        ],
+        "latency_ms": 8.29
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "P010-faq"
+        ],
+        "latency_ms": 8.5
+      },
+      "bm25_doc_ids": [
+        "policy-returns",
+        "FAQ003",
+        "P002-faq"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A03",
+      "query": "定制商品适用七天退货吗？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "policy-shipping"
+        ],
+        "latency_ms": 7.32
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "policy-warranty"
+        ],
+        "latency_ms": 7.52
+      },
+      "bm25_doc_ids": [
+        "policy-returns",
+        "FAQ003",
+        "policy-warranty"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A04",
+      "query": "耳机申请退货有哪些商品状态要求？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "P001-description"
+        ],
+        "latency_ms": 8.55
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "P001-description"
+        ],
+        "latency_ms": 8.79
+      },
+      "bm25_doc_ids": [
+        "FAQ003",
+        "policy-returns",
+        "P001-description"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A05",
+      "query": "我的ORD001订单符合退货条件吗？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "FAQ002"
+        ],
+        "latency_ms": 7.68
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "policy-privacy"
+        ],
+        "latency_ms": 7.92
+      },
+      "bm25_doc_ids": [
+        "policy-returns",
+        "policy-invoice",
+        "policy-privacy"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A06",
+      "query": "退货资格需要结合订单状态判断吗？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "FAQ002"
+        ],
+        "latency_ms": 8.36
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "policy-shipping"
+        ],
+        "latency_ms": 8.69
+      },
+      "bm25_doc_ids": [
+        "policy-returns",
+        "FAQ003",
+        "policy-shipping"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A07",
+      "query": "超过七天还能申请退货吗？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "FAQ001"
+        ],
+        "latency_ms": 9.11
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "FAQ004"
+        ],
+        "latency_ms": 9.44
+      },
+      "bm25_doc_ids": [
+        "FAQ003",
+        "policy-returns",
+        "FAQ005"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A08",
+      "query": "在哪里查看商品退货规则？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "FAQ003",
+        "policy-returns"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "FAQ002"
+        ],
+        "latency_ms": 8.92
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "FAQ001"
+        ],
+        "latency_ms": 9.19
+      },
+      "bm25_doc_ids": [
+        "FAQ003",
+        "policy-returns",
+        "FAQ001"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A09",
+      "query": "售后审核退货要核对哪些条件？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns",
+        "FAQ003"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "policy-warranty"
+        ],
+        "latency_ms": 9.03
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ003",
+          "policy-returns",
+          "policy-warranty"
+        ],
+        "latency_ms": 9.32
+      },
+      "bm25_doc_ids": [
+        "FAQ003",
+        "policy-returns",
+        "policy-privacy"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A10",
+      "query": "七天退货的适用条件是什么？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-returns"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "policy-shipping"
+        ],
+        "latency_ms": 8.57
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-returns",
+          "FAQ003",
+          "policy-invoice"
+        ],
+        "latency_ms": 8.85
+      },
+      "bm25_doc_ids": [
+        "policy-returns",
+        "policy-invoice",
+        "policy-privacy"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A11",
+      "query": "商品保修范围由什么决定？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-warranty"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-warranty",
+          "FAQ005",
+          "policy-returns"
+        ],
+        "latency_ms": 8.58
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-warranty",
+          "FAQ005",
+          "P010-faq"
+        ],
+        "latency_ms": 8.85
+      },
+      "bm25_doc_ids": [
+        "policy-warranty",
+        "FAQ005",
+        "P002-faq"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A12",
+      "query": "这类商品的保修期限在哪里查询？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "policy-warranty"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-warranty",
+          "FAQ005",
+          "FAQ002"
+        ],
+        "latency_ms": 8.66
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-warranty",
+          "FAQ005",
+          "policy-returns"
+        ],
+        "latency_ms": 9.03
+      },
+      "bm25_doc_ids": [
+        "policy-warranty",
+        "policy-returns",
+        "FAQ005"
+      ],
+      "delta_recall": 0.0
+    },
+    {
+      "task_id": "A13",
+      "query": "申请保修需要准备哪些信息？",
+      "category": "aftersales",
+      "relevant_doc_ids": [
+        "FAQ005",
+        "policy-warranty"
+      ],
+      "dense": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "policy-warranty",
+          "FAQ005",
+          "FAQ003"
+        ],
+        "latency_ms": 9.41
+      },
+      "hybrid": {
+        "hit": 1,
+        "recall": 1.0,
+        "doc_ids": [
+          "FAQ005",
+          "policy-warranty",
+          "FAQ003"
+        ],
+        "latency_ms": 9.6
+      },
+      "bm25_doc_ids": [
+        "FAQ005",
+        "policy-warranty",
+        "policy-privacy"
+      ],
+      "delta_recall": 0.0
+    }
+  ]
+}
