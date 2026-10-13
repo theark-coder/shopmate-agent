@@ -1,0 +1,222 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>ShopMate · Day 22</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #172033;
+    }
+
+    h1 { margin-bottom: 6px; }
+    .muted { color: #64748b; }
+
+    textarea {
+      width: 100%;
+      min-height: 90px;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font: inherit;
+    }
+
+    button {
+      padding: 10px 18px;
+      margin: 10px 8px 10px 0;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+      opacity: 0.45;
+    }
+
+    #stop { background: #b45309; }
+
+    pre {
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 16px;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      min-height: 36px;
+    }
+  </style>
+</head>
+<body>
+  <h1>ShopMate</h1>
+  <p class="muted">
+    Day 22 · LangGraph + FastAPI SSE 演示
+  </p>
+
+  <form id="chat-form">
+    <label for="question">请输入问题</label>
+    <textarea id="question" required
+      placeholder="例如：七天退货有什么条件？"></textarea>
+
+    <div>
+      <button id="send" type="submit">发送问题</button>
+      <button id="stop" type="button" disabled>
+        停止生成
+      </button>
+    </div>
+  </form>
+
+  <h2>回答</h2>
+  <pre id="answer"></pre>
+
+  <h2>引用来源</h2>
+  <pre id="citations"></pre>
+
+  <h2>执行事件</h2>
+  <pre id="events"></pre>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const question = document.getElementById("question");
+    const send = document.getElementById("send");
+    const stop = document.getElementById("stop");
+    const answer = document.getElementById("answer");
+    const citations = document.getElementById("citations");
+    const events = document.getElementById("events");
+
+    let controller = null;
+
+    function addEvent(message) {
+      events.textContent += message + "\n";
+    }
+
+    function handleEvent(raw) {
+      let type = "message";
+      let data = "";
+
+      for (const line of raw.split("\n")) {
+        if (line.startsWith("event:")) {
+          type = line.slice(6).trim();
+        } else if (line.startsWith("data:")) {
+          data += line.slice(5).trimStart();
+        }
+      }
+
+      if (!data) return;
+
+      const payload = JSON.parse(data);
+
+      if (type === "start") {
+        addEvent("请求ID：" + payload.request_id);
+      } else if (type === "retrieval") {
+        addEvent(
+          "检索来源：" +
+          payload.source_ids.join(", ")
+        );
+      } else if (type === "tool") {
+        addEvent(
+          "调用工具：" + payload.node +
+          "，结果数量：" + payload.result_count
+        );
+      } else if (type === "answer_delta") {
+        answer.textContent += payload.text;
+      } else if (type === "complete") {
+        citations.textContent =
+          payload.citations.join("\n") || "无";
+        addEvent("完成：" + payload.status);
+      } else if (type === "error") {
+        addEvent("错误：" + payload.message);
+      }
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const text = question.value.trim();
+      if (!text || controller) return;
+
+      controller = new AbortController();
+
+      send.disabled = true;
+      stop.disabled = false;
+
+      answer.textContent = "";
+      citations.textContent = "";
+      events.textContent = "";
+
+      try {
+        const response = await fetch("/api/chat/stream", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            question: text
+          }),
+          signal: controller.signal
+        });
+
+        if (!response.ok || !response.body) {
+          throw new Error(
+            "HTTP 请求失败：" + response.status
+          );
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+
+        while (true) {
+          const { done, value } = await reader.read();
+
+          if (done) break;
+
+          buffer += decoder.decode(
+            value, { stream: true }
+          );
+
+          // SSE 以两个换行符分隔消息
+          let boundary;
+
+          while ((boundary = buffer.indexOf("\n\n")) >= 0) {
+            const raw = buffer.slice(0, boundary);
+            buffer = buffer.slice(boundary + 2);
+
+            if (raw.trim()) {
+              handleEvent(raw);
+            }
+          }
+        }
+
+        if (buffer.trim()) {
+          handleEvent(buffer);
+        }
+
+      } catch (error) {
+        if (controller.signal.aborted) {
+          addEvent("浏览器已取消本次请求");
+        } else {
+          addEvent("请求失败：" + error.message);
+        }
+      } finally {
+        controller = null;
+        send.disabled = false;
+        stop.disabled = true;
+      }
+    });
+
+    stop.addEventListener("click", () => {
+      if (controller) controller.abort();
+    });
+  </script>
+</body>
+</html>
