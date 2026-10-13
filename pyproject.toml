@@ -15,6 +15,7 @@ dependencies = [
     "langgraph>=1.2.15",
     "numpy>=2.5.3",
     "openai>=3.26.1",
+    "psycopg[binary]>=3.2,<4",
     "pymysql>=1.2.3",
     "python-dotenv>=1.2.4",
     "rank-bm25>=0.2.2",
