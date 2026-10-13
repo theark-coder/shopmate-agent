@@ -4,7 +4,7 @@ import json
 import uuid
 from contextlib import aclosing
 from datetime import datetime, timezone
-
+from shopmate_agent.security_api import router as security_router
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse, StreamingResponse
 from pydantic import BaseModel, ConfigDict, Field
@@ -17,6 +17,7 @@ LOG_FILE = ROOT / "data/logs/stream_events.jsonl"
 WEB_FILE = ROOT / "web/day22.html"
 
 app = FastAPI(title="ShopMate Day 22 SSE")
+app.include_router(security_router)
 app.state.graph = build_graph()
 
 
