@@ -1,0 +1,21 @@
+:80 {
+    # Day 23 private APIs MUST NOT be published by a public demo tunnel.
+    @private path /api/secure /api/secure/*
+    handle @private {
+        respond "Not found" 404
+    }
+
+    handle {
+        basic_auth {
+            preview {$DEMO_PASSWORD_HASH}
+        }
+
+        # Caddy public landing page displays Day 25 preset questions.
+        @home path /
+        rewrite @home /day25
+
+        reverse_proxy app:8000 {
+            flush_interval -1
+        }
+    }
+}

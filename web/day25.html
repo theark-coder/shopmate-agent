@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShopMate · HTTPS 演示</title>
+<style>
+ body{max-width:800px;margin:28px auto;padding:0 16px;font:16px/1.65 system-ui,sans-serif;color:#17213a}
+ h1{margin-bottom:4px}small,.muted{color:#596779}button{cursor:pointer;border:0;border-radius:8px;padding:10px 14px;margin:5px;background:#2855cb;color:white}
+ button:disabled{opacity:.5;cursor:not-allowed}button.secondary{background:#e8edf6;color:#203352}
+ textarea{box-sizing:border-box;width:100%;min-height:88px;padding:12px;border:1px solid #bdc7d8;border-radius:8px;font:inherit}
+ pre{background:#f1f4f9;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;padding:12px;min-height:28px}
+ .section{margin:16px 0} .hint{background:#fff6df;padding:10px;border-radius:6px}
+</style></head><body>
+<h1>ShopMate · Day 25</h1>
+<p class="muted">HTTPS 演示 · 登录为预览账号，不代表真实订单身份认证。</p>
+<p class="hint">仅限演示数据。私人订单接口不通过公共入口开放。</p>
+<div class="section">
+<strong>预置问题</strong><div id="presets">
+<button class="secondary" data-question="七天退货有什么条件？">退货政策</button>
+<button class="secondary" data-question="商品P001多少钱？">商品价格</button>
+<button class="secondary" data-question="订单ORD001现在什么状态？">匿名订单拒答</button>
+</div></div>
+<form id="chat"><label for="question">你的问题</label>
+<textarea id="question" maxlength="500" required placeholder="输入一个演示问题"></textarea>
+<div><button type="submit" id="send">发送</button>
+<button type="button" id="cancel" class="secondary" disabled>取消本次请求</button></div></form>
+<div class="section"><strong>回答</strong><pre id="answer"></pre></div>
+<div class="section"><strong>引用</strong><pre id="sources">—</pre></div>
+<div class="section"><strong>事件轨迹</strong><pre id="trace"></pre></div>
+<script>
+const $=id=>document.getElementById(id);
+let ctrl=null;
+$('presets').addEventListener('click',e=>{
+  const q=e.target.closest('button[data-question]');if(q) $('question').value=q.dataset.question;
+});
+function eventLog(text){$('trace').textContent+=text+'\n'}
+function handle(raw){
+ let name='',data='';
+ for(const line of raw.split('\n')){
+  if(line.startsWith('event:'))name=line.slice(6).trim();
+  else if(line.startsWith('data:'))data+=line.slice(5).trimStart();
+ }
+ if(!data)return;
+ const x=JSON.parse(data);
+ if(name==='start')eventLog('开始 '+x.request_id);
+ if(name==='retrieval')eventLog('检索: '+x.source_ids.join(', '));
+ if(name==='tool')eventLog('工具: '+x.node+'（'+x.result_count+' 条）');
+ if(name==='answer_delta')$('answer').textContent+=x.text;
+ if(name==='complete'){$('sources').textContent=x.citations.join('\n')||'无';eventLog('完成: '+x.status)}
+ if(name==='error')eventLog('错误: '+x.message);
+}
+$('cancel').onclick=()=>ctrl?.abort();
+$('chat').onsubmit=async e=>{
+ e.preventDefault();if(ctrl)return;
+ const q=$('question').value.trim();if(!q)return;
+ ctrl=new AbortController(); const current=ctrl;
+ $('send').disabled=true;$('cancel').disabled=false;
+ $('answer').textContent='';$('sources').textContent='—';$('trace').textContent='';
+ try{
+  const r=await fetch('/api/chat/stream',{
+   method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({question:q}),signal:current.signal
+  });
+  if(!r.ok||!r.body)throw Error('HTTP '+r.status);
+  const reader=r.body.getReader();const decoder=new TextDecoder();let buffer='';
+  while(true){
+   const {done,value}=await reader.read();if(done)break;
+   buffer+=decoder.decode(value,{stream:true}).replace(/\r\n/g,'\n');
+   let end;while((end=buffer.indexOf('\n\n'))!==-1){
+    const frame=buffer.slice(0,end);buffer=buffer.slice(end+2);
+    if(frame.trim())handle(frame);
+   }
+  }
+ }catch(err){eventLog(current.signal.aborted?'已取消':'请求失败: '+err.message)}
+ finally{ctrl=null;$('send').disabled=false;$('cancel').disabled=true}
+};
+</script></body></html>

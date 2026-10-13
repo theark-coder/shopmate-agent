@@ -5,3 +5,4 @@ __pycache__/
 data/index/*.npz
 data/*.db
 data/logs/
+.env.day25
