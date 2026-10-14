@@ -1,0 +1,9 @@
+[
+  {"id":"D01","kind":"policy","question":"签收后7天内退货政策怎么规定？","source":"policy-returns"},
+  {"id":"D02","kind":"policy","question":"配送政策对付款后发货时间有什么规定？","source":"policy-shipping"},
+  {"id":"D03","kind":"product","question":"P009商品价格和库存是多少？","product_id":"P009"},
+  {"id":"D04","kind":"product","question":"商品P010多少钱？","product_id":"P010"},
+  {"id":"D05","kind":"private_order","question":"订单ORD001现在是什么物流状态？","order_id":"ORD001"},
+  {"id":"D06","kind":"handoff","question":"退款政策的特殊情况，可以破例由人工批准吗？"},
+  {"id":"D07","kind":"clarify","question":"你好，我想咨询一些事情"}
+]

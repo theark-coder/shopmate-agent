@@ -1,0 +1,22 @@
+[
+  {"id":"H01","kind":"policy","question":"七天退货有什么条件？","source":"policy-returns"},
+  {"id":"H02","kind":"policy","question":"签收7天内能退货吗？","source":"policy-returns"},
+  {"id":"H03","kind":"policy","question":"退货政策规定商品要保持什么状态？","source":"policy-returns"},
+  {"id":"H04","kind":"policy","question":"配送政策规定付款后多长时间发货？","source":"policy-shipping"},
+  {"id":"H05","kind":"policy","question":"现在的发货政策是什么？","source":"policy-shipping"},
+  {"id":"H06","kind":"policy","question":"发票政策可以申请电子发票吗？","source":"policy-invoice"},
+  {"id":"H07","kind":"policy","question":"保修期限与范围应该以什么为准？","source":"policy-warranty"},
+  {"id":"H08","kind":"policy","question":"申请保修时对应哪个政策文件？","source":"policy-warranty"},
+  {"id":"H09","kind":"product","question":"商品P001多少钱？","product_id":"P001"},
+  {"id":"H10","kind":"product","question":"商品P002现在的价格和库存？","product_id":"P002"},
+  {"id":"H11","kind":"product","question":"P003多少钱，库存多少？","product_id":"P003"},
+  {"id":"H12","kind":"product","question":"P004的库存和价格是什么？","product_id":"P004"},
+  {"id":"H13","kind":"product","question":"P005售价多少？","product_id":"P005"},
+  {"id":"H14","kind":"product","question":"P006还有多少库存？","product_id":"P006"},
+  {"id":"H15","kind":"private_order","question":"订单ORD001现在什么状态？","order_id":"ORD001"},
+  {"id":"H16","kind":"private_order","question":"能查订单ORD001的物流吗？","order_id":"ORD001"},
+  {"id":"H17","kind":"private_order","question":"帮我看看ORD001到哪了？","order_id":"ORD001"},
+  {"id":"H18","kind":"handoff","question":"七天退货过期，能破例退款吗？"},
+  {"id":"H19","kind":"handoff","question":"保修超过期限可以特殊批准吗？"},
+  {"id":"H20","kind":"clarify","question":"你好，可以帮我吗？"}
+]

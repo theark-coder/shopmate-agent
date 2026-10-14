@@ -1,0 +1,466 @@
+{
+  "run_at_utc": "2026-10-14T11:03:15.466775+00:00",
+  "git_commit": "f8fc990037310429d1f07a749cc7653d7ad9318d",
+  "source_sha256": {
+    "src/shopmate_agent/shopmate_graph.py": "7f2293fd532c40ceb53ae9689cf962e0fb9425c9d715174952614114bc02d5a8",
+    "src/shopmate_agent/answer_quality.py": "1b8d8559d8168d4dc72143e013f97c0100e990a4be5f9b31beaf916c55efc734",
+    "eval/day27/dev.json": "7e24d86286fbb7629028170aca46f9290a1bc5bd4136dc2279218fffaf173c81",
+    "eval/day27/holdout.json": "0d698d638cf3a06283aaf78b6bb07af4aed661a6e6a802b803e1f59e98055ac0",
+    "data/knowledge/policies/invoice.md": "7deaa8cbf0c49d732ceeeb01c2ad60fa6796c6eb3a9048555ad761d741d02d2d",
+    "data/knowledge/policies/privacy.md": "380cc64324391f7dd66fc053408aeca0127b460684422c60cbd4e30b8add0d7c",
+    "data/knowledge/policies/returns.md": "0447e1e4a1ac74c2d189a8c8c87d101d513ab73ac5c01a98c6f810aec835bffc",
+    "data/knowledge/policies/shipping.md": "59ec2cac0eb5599a8417648ffb75acd5917bf38ab37b84bb5cc3ff4e0d8c14b0",
+    "data/knowledge/policies/warranty.md": "bb062c9bd58db51be411a5c5dfd2b814c37483d44b296135713bf881ce04b427"
+  },
+  "business_db_sha256": "816ac97d59fac0c2a0e6fcf4a447b811d52a28e4054f9e450fe472f84ba6d074",
+  "evaluation_scope": "Offline compiled LangGraph.invoke; NOT HTTP/SSE or live LLM inference",
+  "total_runtime_seconds": 0.057,
+  "environment": {
+    "model": "local deterministic rules graph; no hosted LLM",
+    "test_split": "20 frozen holdout tasks, never used for tuning"
+  },
+  "metrics": {
+    "task_success": 17,
+    "total": 20,
+    "success_rate": 0.85,
+    "by_kind": {
+      "clarify": {
+        "passed": 1,
+        "total": 1
+      },
+      "handoff": {
+        "passed": 0,
+        "total": 2
+      },
+      "policy": {
+        "passed": 7,
+        "total": 8
+      },
+      "private_order": {
+        "passed": 3,
+        "total": 3
+      },
+      "product": {
+        "passed": 6,
+        "total": 6
+      }
+    },
+    "unsupported_commitment_cases": 0,
+    "required_handoff_cases": 2,
+    "successful_handoffs": 0,
+    "failures": [
+      {
+        "id": "H05",
+        "issues": [
+          "wrong_intent",
+          "missing_policy_citation",
+          "policy_not_grounded_in_document"
+        ]
+      },
+      {
+        "id": "H18",
+        "issues": [
+          "missing_human_handoff"
+        ]
+      },
+      {
+        "id": "H19",
+        "issues": [
+          "missing_human_handoff"
+        ]
+      }
+    ]
+  },
+  "cost": {
+    "llm_api_calls": 0,
+    "actual_model_tokens": null,
+    "measured_total_usd": null,
+    "explanation": "No model calls; infrastructure or labor costs not measured."
+  },
+  "human_review": {
+    "status": "complete",
+    "reviewed": 20,
+    "passed": 18,
+    "failed": 2,
+    "disagreement_ids": [
+      "H05"
+    ],
+    "caveat": "Human labels entered in CSV; not computed by the agent."
+  },
+  "results": [
+    {
+      "id": "H01",
+      "question": "七天退货有什么条件？",
+      "kind": "policy",
+      "passed": true,
+      "issues": [],
+      "answer": "以下是已登记的政策原文：\n# 退货政策\n\n政策名称：退货政策\n\n适用说明：符合条件的商品可在签收后7天内申请退货。商品应保持完好；定制商品等特殊类别可能不适用。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-returns，版本：1.0]",
+      "citations": [
+        "policy-returns"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:returns",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H02",
+      "question": "签收7天内能退货吗？",
+      "kind": "policy",
+      "passed": true,
+      "issues": [],
+      "answer": "以下是已登记的政策原文：\n# 退货政策\n\n政策名称：退货政策\n\n适用说明：符合条件的商品可在签收后7天内申请退货。商品应保持完好；定制商品等特殊类别可能不适用。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-returns，版本：1.0]",
+      "citations": [
+        "policy-returns"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:returns",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H03",
+      "question": "退货政策规定商品要保持什么状态？",
+      "kind": "policy",
+      "passed": true,
+      "issues": [],
+      "answer": "以下是已登记的政策原文：\n# 退货政策\n\n政策名称：退货政策\n\n适用说明：符合条件的商品可在签收后7天内申请退货。商品应保持完好；定制商品等特殊类别可能不适用。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-returns，版本：1.0]",
+      "citations": [
+        "policy-returns"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:returns",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H04",
+      "question": "配送政策规定付款后多长时间发货？",
+      "kind": "policy",
+      "passed": true,
+      "issues": [],
+      "answer": "以下是已登记的政策原文：\n# 配送政策\n\n政策名称：配送政策\n\n适用说明：付款成功后通常48小时内发货，具体以订单状态为准。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-shipping，版本：1.0]",
+      "citations": [
+        "policy-shipping"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:shipping",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H05",
+      "question": "现在的发货政策是什么？",
+      "kind": "policy",
+      "passed": false,
+      "issues": [
+        "wrong_intent",
+        "missing_policy_citation",
+        "policy_not_grounded_in_document"
+      ],
+      "answer": "请补充具体商品、订单或政策问题。",
+      "citations": [],
+      "intent": "clarify",
+      "verified": true,
+      "trace": [
+        "classify:clarify",
+        "clarify"
+      ]
+    },
+    {
+      "id": "H06",
+      "question": "发票政策可以申请电子发票吗？",
+      "kind": "policy",
+      "passed": true,
+      "issues": [],
+      "answer": "以下是已登记的政策原文：\n# 发票政策\n\n政策名称：发票政策\n\n适用说明：支持符合条件的订单申请电子发票。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-invoice，版本：1.0]",
+      "citations": [
+        "policy-invoice"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:invoice",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H07",
+      "question": "保修期限与范围应该以什么为准？",
+      "kind": "policy",
+      "passed": true,
+      "issues": [],
+      "answer": "以下是已登记的政策原文：\n# 保修政策\n\n政策名称：保修政策\n\n适用说明：保修范围和期限以对应商品说明及订单凭证为准。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-warranty，版本：1.0]",
+      "citations": [
+        "policy-warranty"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:warranty",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H08",
+      "question": "申请保修时对应哪个政策文件？",
+      "kind": "policy",
+      "passed": true,
+      "issues": [],
+      "answer": "以下是已登记的政策原文：\n# 保修政策\n\n政策名称：保修政策\n\n适用说明：保修范围和期限以对应商品说明及订单凭证为准。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-warranty，版本：1.0]",
+      "citations": [
+        "policy-warranty"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:warranty",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H09",
+      "question": "商品P001多少钱？",
+      "kind": "product",
+      "passed": true,
+      "issues": [],
+      "answer": "根据商品数据库：蓝牙降噪耳机（P001）：399.00元，库存12件",
+      "citations": [
+        "db:products:P001"
+      ],
+      "intent": "product",
+      "verified": true,
+      "trace": [
+        "classify:product",
+        "product_tool",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H10",
+      "question": "商品P002现在的价格和库存？",
+      "kind": "product",
+      "passed": true,
+      "issues": [],
+      "answer": "根据商品数据库：机械键盘（P002）：299.00元，库存25件",
+      "citations": [
+        "db:products:P002"
+      ],
+      "intent": "product",
+      "verified": true,
+      "trace": [
+        "classify:product",
+        "product_tool",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H11",
+      "question": "P003多少钱，库存多少？",
+      "kind": "product",
+      "passed": true,
+      "issues": [],
+      "answer": "根据商品数据库：无线鼠标（P003）：129.00元，库存40件",
+      "citations": [
+        "db:products:P003"
+      ],
+      "intent": "product",
+      "verified": true,
+      "trace": [
+        "classify:product",
+        "product_tool",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H12",
+      "question": "P004的库存和价格是什么？",
+      "kind": "product",
+      "passed": true,
+      "issues": [],
+      "answer": "根据商品数据库：便携显示器（P004）：799.00元，库存8件",
+      "citations": [
+        "db:products:P004"
+      ],
+      "intent": "product",
+      "verified": true,
+      "trace": [
+        "classify:product",
+        "product_tool",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H13",
+      "question": "P005售价多少？",
+      "kind": "product",
+      "passed": true,
+      "issues": [],
+      "answer": "根据商品数据库：USB-C扩展坞（P005）：199.00元，库存30件",
+      "citations": [
+        "db:products:P005"
+      ],
+      "intent": "product",
+      "verified": true,
+      "trace": [
+        "classify:product",
+        "product_tool",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H14",
+      "question": "P006还有多少库存？",
+      "kind": "product",
+      "passed": true,
+      "issues": [],
+      "answer": "根据商品数据库：移动固态硬盘（P006）：499.00元，库存15件",
+      "citations": [
+        "db:products:P006"
+      ],
+      "intent": "product",
+      "verified": true,
+      "trace": [
+        "classify:product",
+        "product_tool",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H15",
+      "question": "订单ORD001现在什么状态？",
+      "kind": "private_order",
+      "passed": true,
+      "issues": [],
+      "answer": "没有足够的已核实信息，暂不能回答。",
+      "citations": [],
+      "intent": "order",
+      "verified": true,
+      "trace": [
+        "classify:order",
+        "order_tool:unauthorized_or_missing",
+        "answer:no_evidence",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H16",
+      "question": "能查订单ORD001的物流吗？",
+      "kind": "private_order",
+      "passed": true,
+      "issues": [],
+      "answer": "没有足够的已核实信息，暂不能回答。",
+      "citations": [],
+      "intent": "order",
+      "verified": true,
+      "trace": [
+        "classify:order",
+        "order_tool:unauthorized_or_missing",
+        "answer:no_evidence",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H17",
+      "question": "帮我看看ORD001到哪了？",
+      "kind": "private_order",
+      "passed": true,
+      "issues": [],
+      "answer": "没有足够的已核实信息，暂不能回答。",
+      "citations": [],
+      "intent": "order",
+      "verified": true,
+      "trace": [
+        "classify:order",
+        "order_tool:unauthorized_or_missing",
+        "answer:no_evidence",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H18",
+      "question": "七天退货过期，能破例退款吗？",
+      "kind": "handoff",
+      "passed": false,
+      "issues": [
+        "missing_human_handoff"
+      ],
+      "answer": "以下是已登记的政策原文：\n# 退货政策\n\n政策名称：退货政策\n\n适用说明：符合条件的商品可在签收后7天内申请退货。商品应保持完好；定制商品等特殊类别可能不适用。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-returns，版本：1.0]",
+      "citations": [
+        "policy-returns"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:returns",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H19",
+      "question": "保修超过期限可以特殊批准吗？",
+      "kind": "handoff",
+      "passed": false,
+      "issues": [
+        "missing_human_handoff"
+      ],
+      "answer": "以下是已登记的政策原文：\n# 保修政策\n\n政策名称：保修政策\n\n适用说明：保修范围和期限以对应商品说明及订单凭证为准。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-warranty，版本：1.0]",
+      "citations": [
+        "policy-warranty"
+      ],
+      "intent": "policy",
+      "verified": true,
+      "trace": [
+        "classify:policy",
+        "policy_retrieve:warranty",
+        "answer",
+        "verify:pass"
+      ]
+    },
+    {
+      "id": "H20",
+      "question": "你好，可以帮我吗？",
+      "kind": "clarify",
+      "passed": true,
+      "issues": [],
+      "answer": "请补充具体商品、订单或政策问题。",
+      "citations": [],
+      "intent": "clarify",
+      "verified": true,
+      "trace": [
+        "classify:clarify",
+        "clarify"
+      ]
+    }
+  ]
+}
