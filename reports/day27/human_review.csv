@@ -35,7 +35,7 @@ H04,配送政策规定付款后多长时间发货？,policy,PASS,"以下是已�
 
 具体是否符合条件，需结合订单和商品状态判断。
 [来源：policy-shipping，版本：1.0]",policy-shipping,PASS,PASS
-H05,现在的发货政策是什么？,policy,FAIL,请补充具体商品、订单或政策问题。,,PASS,
+H05,现在的发货政策是什么？,policy,FAIL,请补充具体商品、订单或政策问题。,,FAIL,
 H06,发票政策可以申请电子发票吗？,policy,PASS,"以下是已登记的政策原文：
 # 发票政策
 

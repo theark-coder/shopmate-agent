@@ -80,11 +80,9 @@
   "human_review": {
     "status": "complete",
     "reviewed": 20,
-    "passed": 18,
-    "failed": 2,
-    "disagreement_ids": [
-      "H05"
-    ],
+    "passed": 17,
+    "failed": 3,
+    "disagreement_ids": [],
     "caveat": "Human labels entered in CSV; not computed by the agent."
   },
   "results": [
