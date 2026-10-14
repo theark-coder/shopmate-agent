@@ -1,0 +1,45 @@
+{
+  "run_at_utc": "2026-10-14T03:03:57.486265+00:00",
+  "target_url": "http://127.0.0.1:8000/api/chat/stream",
+  "run_configuration": {
+    "requests": 40,
+    "concurrency": 20,
+    "max_retries": 0,
+    "seed": 26,
+    "timeout_s": 75,
+    "scenario": "fixed-demo-5-questions"
+  },
+  "environment": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "cpu": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "logical_cpu_count": 12,
+    "hardware_notes": "i7-10750H / 16GB RAM / GTX 1650",
+    "service": "ShopMate FastAPI / LangGraph rules demo",
+    "model": "No hosted LLM in current graph",
+    "token_accounting": "unavailable: no model usage returned"
+  },
+  "metrics": {
+    "completed_requests": 4,
+    "total_requests": 40,
+    "failure_rate": 0.9,
+    "status_counts": {
+      "complete": 4,
+      "503": 36
+    },
+    "ttft_p50_ms_success_only": 595.43,
+    "ttft_p95_ms_success_only": 657.5,
+    "latency_p95_ms_success_only": 1018.62,
+    "wall_seconds": 1.642,
+    "success_throughput_rps": 2.436,
+    "request_attempts": 40,
+    "answer_characters_total": 160,
+    "actual_model_tokens": null
+  },
+  "limitations": [
+    "Only on local demo hardware; no external LLM API/token usage.",
+    "TTFT is first verified answer_delta, not initial SSE start.",
+    "Success requires SSE complete; HTTP 200 with SSE error is failure.",
+    "429/503 load shedding counts as failed requests unless retry succeeds.",
+    "In-process limiter is per worker, not cluster-wide."
+  ]
+}

@@ -1,0 +1,8 @@
+# Overlay, never replace the proven Day 24 + Day 25 Compose files.
+services:
+  app:
+    command: ["uvicorn", "shopmate_agent.day26_app:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      SHOPMATE_MAX_INFLIGHT: ${SHOPMATE_MAX_INFLIGHT:-4}
+      SHOPMATE_RPM: ${SHOPMATE_RPM:-120}
+      SHOPMATE_STREAM_TIMEOUT_S: ${SHOPMATE_STREAM_TIMEOUT_S:-60}
