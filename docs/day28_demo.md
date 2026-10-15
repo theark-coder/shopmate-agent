@@ -1,5 +1,7 @@
 # Three-minute ShopMate Demo / 三分钟演示脚本
 
+> 历史版本说明：以下为 Day 28 原始演示脚本。Day 27 冻结评测中的 H18/H19 当时未正确转人工；Day 29 已添加专门的转人工分支。请使用 [Day 29 首访验收](day29_acceptance.md) 演示最新五项能力；原有失败记录仍然保留，不能改写成旧版本成功。
+
 Before recording: ensure `app`, `db`, `proxy` are running, the preview login is known, and **do not show `.env`, tokens, local private orders or real customer details**. Prefer the local `http://127.0.0.1:8080` demo; ngrok address is transient.
 
 | Time | Action and expected observation | What it proves |

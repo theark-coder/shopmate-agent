@@ -124,13 +124,13 @@ async def stream_events(
                             data.get("verified", False)
                         )
 
-                    elif node in ("clarify", "safe_end"):
+                    elif node in ("clarify", "safe_end", "human_handoff"):
                         answer = data.get("answer", "")
                         citations = data.get(
                             "citations", []
                         )
                         safe_end = node == "safe_end"
-                        verified = node == "clarify"
+                        verified = node in ("clarify", "human_handoff")
 
         if not answer or not (verified or safe_end):
             raise RuntimeError(

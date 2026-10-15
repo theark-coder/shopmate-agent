@@ -42,10 +42,24 @@ def order_id(text: str) -> str | None:
     return match.group().upper() if match else None
 
 
+def needs_policy_handoff(question: str) -> bool:
+    """Exceptions require a human, never an automatic refund/extension."""
+    domains = ("退货", "退款", "保修")
+    exceptions = (
+        "破例", "过期", "超过期限", "超出期限", "特殊批准",
+        "特殊情况", "例外批准", "过了退货期限", "延长保修",
+    )
+    return any(term in question for term in domains) and any(
+        term in question for term in exceptions
+    )
+
+
 def classify(state: ShopState) -> dict:
     q = state["question"]
 
-    if (
+    if needs_policy_handoff(q):
+        intent = "handoff"
+    elif (
         "订单" in q or "物流" in q
         or order_id(q) is not None
     ):
@@ -76,6 +90,7 @@ def classify(state: ShopState) -> dict:
 
 def route_intent(state: ShopState) -> str:
     return {
+        "handoff": "human_handoff",
         "product": "product_tool",
         "order": "order_tool",
         "policy": "policy_retrieve",
@@ -173,6 +188,20 @@ def policy_retrieve(state: ShopState) -> dict:
     return {
         "evidence": [evidence],
         "trace": state["trace"] + ["policy_retrieve:" + name],
+    }
+
+
+def human_handoff(state: ShopState) -> dict:
+    """Safe explanation only. Do not claim a human ticket was opened."""
+    return {
+        "answer": (
+            "这个请求涉及退货、退款或保修政策的例外，"
+            "需要人工客服进一步核实。我无法直接批准退款、延期或特殊处理。"
+            "请通过官方人工客服渠道说明情况；不要在公开演示中填写真实订单资料。"
+        ),
+        "citations": [],
+        "verified": True,
+        "trace": state["trace"] + ["human_handoff"],
     }
 
 
@@ -302,6 +331,7 @@ def build_graph():
     g.add_node("order_tool", order_tool)
     g.add_node("policy_retrieve", policy_retrieve)
     g.add_node("clarify", clarify)
+    g.add_node("human_handoff", human_handoff)
     g.add_node("answer", answer)
     g.add_node("verify", verify)
     g.add_node("retry_retrieve", retry_retrieve)
@@ -314,6 +344,7 @@ def build_graph():
         g.add_edge(node, "answer")
 
     g.add_edge("clarify", END)
+    g.add_edge("human_handoff", END)
     g.add_edge("answer", "verify")
 
     g.add_conditional_edges(

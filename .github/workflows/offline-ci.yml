@@ -44,3 +44,4 @@ jobs:
             tests/test_day26_perf.py \
             tests/test_day27_eval.py \
             tests/test_day28_open_source.py
+            tests/test_day29_acceptance.py
