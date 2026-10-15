@@ -1,0 +1,37 @@
+{
+  "project": "shopmate-agent",
+  "release": "v1.0.0",
+  "prepared_at_utc": "2026-10-15T03:27:42.063381+00:00",
+  "repository_url": "https://github.com/theark-coder/shopmate-agent",
+  "demo_url": "https://probable-defuse-deforest.ngrok-free.dev",
+  "demo_url_notice": "Temporary ngrok HTTPS; online access depends on host/tunnel uptime. Must verify separately from a second device.",
+  "evidence": {
+    "day27_frozen_holdout": {
+      "passed": 17,
+      "total": 20,
+      "failed_ids": [
+        "H05",
+        "H18",
+        "H19"
+      ]
+    },
+    "day29_http_sse_smoke": {
+      "passed": 5,
+      "total": 5,
+      "source_sha256": "c732a64db0407d7d40ec38a6c8043b948568b6fc85459d2767e850e2e6b8d4c9"
+    },
+    "day26_20_concurrency": {
+      "successful": 4,
+      "total": 40,
+      "http_503": 36
+    },
+    "report_sha256": {
+      "reports/day26/performance.json": "653258a862d3c67da138d472c4195fabcd5a05e7e706426f0fbe7ccd774b7a81",
+      "reports/day27/holdout.json": "b8055e0e8ded637326f8c7c5cf095bc7d610d5f1e57a991e67197574bc362373",
+      "reports/day29/smoke.json": "154f38a2ce75976123913587bf80242be705aa36105d526cd0139e7e660a2807"
+    }
+  },
+  "data_scope": "Synthetic products, policies, accounts and orders; no real merchant data",
+  "architecture_scope": "Deterministic LangGraph live answers; pgvector used in offline index, not live answering; model tokens not measured",
+  "external_checks": "PENDING: user must verify public HTTPS, fresh app restart, rollback, and latest GitHub CI before publishing"
+}

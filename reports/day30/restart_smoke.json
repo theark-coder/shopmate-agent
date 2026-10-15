@@ -1,0 +1,119 @@
+{
+  "run_utc": "2026-10-15T03:22:54.938772+00:00",
+  "target": "http://127.0.0.1:8000",
+  "environment": "local-only app endpoint, Day26 middleware, real HTTP SSE",
+  "implementation_sha256": "c732a64db0407d7d40ec38a6c8043b948568b6fc85459d2767e850e2e6b8d4c9",
+  "task_count": 5,
+  "passed": 5,
+  "failed": 0,
+  "cases": [
+    {
+      "case_id": "S01",
+      "kind": "policy",
+      "question": "七天退货有什么条件？",
+      "passed": true,
+      "issues": [],
+      "http_status": 200,
+      "events": [
+        "start",
+        "retrieval",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "complete"
+      ],
+      "citations": [
+        "policy-returns"
+      ],
+      "answer_excerpt": "以下是已登记的政策原文：\n# 退货政策\n\n政策名称：退货政策\n\n适用说明：符合条件的商品可在签收后7天内申请退货。商品应保持完好；定制商品等特殊类别可能不适用。\n\n具体是否符合条件，需结合订单和商品状态判断。\n[来源：policy-returns，版本：1.0]",
+      "duration_ms": 489.31
+    },
+    {
+      "case_id": "S02",
+      "kind": "product",
+      "question": "商品P001多少钱？",
+      "passed": true,
+      "issues": [],
+      "http_status": 200,
+      "events": [
+        "start",
+        "tool",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "complete"
+      ],
+      "citations": [
+        "db:products:P001"
+      ],
+      "answer_excerpt": "根据商品数据库：蓝牙降噪耳机（P001）：399.00元，库存12件",
+      "duration_ms": 139.37
+    },
+    {
+      "case_id": "S03",
+      "kind": "anonymous_order",
+      "question": "订单ORD001现在什么状态？",
+      "passed": true,
+      "issues": [],
+      "http_status": 200,
+      "events": [
+        "start",
+        "tool",
+        "answer_delta",
+        "answer_delta",
+        "complete"
+      ],
+      "citations": [],
+      "answer_excerpt": "没有足够的已核实信息，暂不能回答。",
+      "duration_ms": 96.86
+    },
+    {
+      "case_id": "S04",
+      "kind": "human_handoff",
+      "question": "七天退货过期，能破例退款吗？",
+      "passed": true,
+      "issues": [],
+      "http_status": 200,
+      "events": [
+        "start",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "answer_delta",
+        "complete"
+      ],
+      "citations": [],
+      "answer_excerpt": "这个请求涉及退货、退款或保修政策的例外，需要人工客服进一步核实。我无法直接批准退款、延期或特殊处理。请通过官方人工客服渠道说明情况；不要在公开演示中填写真实订单资料。",
+      "duration_ms": 293.01
+    },
+    {
+      "case_id": "S05",
+      "kind": "clarification",
+      "question": "你好，可以帮我吗？",
+      "passed": true,
+      "issues": [],
+      "http_status": 200,
+      "events": [
+        "start",
+        "answer_delta",
+        "answer_delta",
+        "complete"
+      ],
+      "citations": [],
+      "answer_excerpt": "请补充具体商品、订单或政策问题。",
+      "duration_ms": 104.81
+    }
+  ],
+  "scope": "first-visit five-task smoke only; not a rerun of Day27 frozen holdout"
+}
